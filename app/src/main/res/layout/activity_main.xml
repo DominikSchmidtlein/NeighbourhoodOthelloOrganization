@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.domkick1.tictactoe.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_many_players" />
+
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_text_name1"
+        android:layout_marginEnd="15dp"
+        android:text="@string/name_player1"
+        android:textSize="@dimen/score_text_height"
+        android:onClick="defaultName"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_text_name2"
+        android:layout_marginEnd="15dp"
+        android:text="@string/name_player2"
+        android:textSize="@dimen/score_text_height"
+        android:onClick="defaultName"
+        android:clickable="true" />
+
+    <EditText
+        android:id="@+id/edit_text_name1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/horizontal_line"
+        android:layout_toEndOf="@+id/description1"
+        android:maxLength="10"
+        android:hint="@string/hint" />
+
+    <EditText
+        android:id="@+id/edit_text_name2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_line"
+        android:layout_toEndOf="@+id/description2"
+        android:maxLength="10"
+        android:hint="@string/hint" />
+
+    <Button 
+        android:id="@+id/play_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edit_text_name2"
+        android:layout_marginTop="50dp"
+        android:text="@string/play_button"
+        android:onClick="startGame" />
+
+</RelativeLayout>
