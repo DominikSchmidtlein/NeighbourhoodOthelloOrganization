@@ -1,4 +1,0 @@
-NeighbourhoodOthelloOrganization
-================================
-
-Othello Android App
